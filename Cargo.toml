@@ -21,61 +21,28 @@ nu-cmd-extra = { path = "../nushell/crates/nu-cmd-extra" }
 nu-utils = { path = "../nushell/crates/nu-utils" }
 nu-cli = { path = "../nushell/crates/nu-cli" }
 nu-path = { path = "../nushell/crates/nu-path" }
+# nu-plugin = "0.101.0"
+# nu-protocol = { version = "0.101.0", features = ["plugin"] }
+
 rand = {version = "0.8", optional = true }
 multipart-rs = { version = "0.1.13", optional = true }
 native-tls = { version = "0.2", optional = true }
 ureq = { version = "2.12", optional = true }
 uuid = {version = "1.12.0", optional = true }
-# nu-plugin = "0.101.0"
-# nu-protocol = { version = "0.101.0", features = ["plugin"] }
 
 [dev-dependencies]
 nu-plugin-test-support = { path = "../nushell/crates/nu-plugin-test-support" }
 # nu-plugin-test-support = { version = "0.101.0" }
 
 [features]
-# plugin = [
-#   # crates
-#   "nu-cmd-plugin",
-#   "nu-plugin-engine",
-
-#   # features
-#   "nu-cli/plugin",
-#   "nu-cmd-lang/plugin",
-#   "nu-command/plugin",
-#   "nu-engine/plugin",
-#   "nu-engine/plugin",
-#   "nu-parser/plugin",
-#   "nu-protocol/plugin",
-# ]
 
 default = [
-#   "plugin",
-#   "trash-support",
   "sqlite",
   "rand",
   "os",
   "network"
-#   "mimalloc",
 ]
 stable = ["default"]
-# NOTE: individual features are also passed to `nu-cmd-lang` that uses them to generate the feature matrix in the `version` command
-
-# Enable to statically link OpenSSL (perl is required, to build OpenSSL https://docs.rs/openssl/latest/openssl/);
-# otherwise the system version will be used. Not enabled by default because it takes a while to build
-# static-link-openssl = ["dep:openssl", "nu-cmd-lang/static-link-openssl"]
-
-# mimalloc = ["nu-cmd-lang/mimalloc", "dep:mimalloc"]
-# Optional system clipboard support in `reedline`, this behavior has problematic compatibility with some systems.
-# Missing X server/ Wayland can cause issues
-# system-clipboard = [
-#   "reedline/system_clipboard",
-#   "nu-cli/system-clipboard",
-#   "nu-cmd-lang/system-clipboard",
-# ]
-
-# Stable (Default)
-# trash-support = ["nu-command/trash-support", "nu-cmd-lang/trash-support"]
 
 # SQLite commands for nushell
 sqlite = ["nu-command/sqlite", "nu-cmd-lang/sqlite"]

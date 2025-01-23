@@ -40,3 +40,7 @@ Examples:
 
 ### Error from bad command
 ![alt text](bad_flag_error.png)
+
+### Notes
+
+This is seriously a hack job. Some things are not exposed to plugins so this plugin is essentially creating a new engine_state and stack. Your mileage may vary. PRs welcome!
