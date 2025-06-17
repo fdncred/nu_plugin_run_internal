@@ -11,23 +11,32 @@ license = "MIT"
 
 [dependencies]
 # for local development, you can use a path dependency
-nu-plugin = { path = "../nushell/crates/nu-plugin" }
-nu-protocol = { path = "../nushell/crates/nu-protocol", features = ["plugin"] }
-nu-engine = { path = "../nushell/crates/nu-engine" }
-nu-parser = { path = "../nushell/crates/nu-parser" }
-nu-command = { path = "../nushell/crates/nu-command" }
-nu-cmd-lang = { path = "../nushell/crates/nu-cmd-lang" }
-nu-cmd-extra = { path = "../nushell/crates/nu-cmd-extra" }
-nu-utils = { path = "../nushell/crates/nu-utils" }
-nu-cli = { path = "../nushell/crates/nu-cli" }
-nu-path = {  path = "../nushell/crates/nu-path" }
-# nu-plugin = "0.101.0"
-# nu-protocol = { version = "0.101.0", features = ["plugin"] }
+# nu-plugin = { path = "../nushell/crates/nu-plugin" }
+# nu-protocol = { path = "../nushell/crates/nu-protocol", features = ["plugin"] }
+# nu-engine = { path = "../nushell/crates/nu-engine" }
+# nu-parser = { path = "../nushell/crates/nu-parser" }
+# nu-command = { path = "../nushell/crates/nu-command" }
+# nu-cmd-lang = { path = "../nushell/crates/nu-cmd-lang" }
+# nu-cmd-extra = { path = "../nushell/crates/nu-cmd-extra" }
+# nu-utils = { path = "../nushell/crates/nu-utils" }
+# nu-cli = { path = "../nushell/crates/nu-cli" }
+# nu-path = {  path = "../nushell/crates/nu-path" }
+
+nu-plugin = "0.105.1"
+nu-protocol = { version = "0.105.1", features = ["plugin"] }
+nu-engine = "0.105.1"
+nu-parser = "0.105.1"
+nu-command = "0.105.1"
+nu-cmd-lang = "0.105.1"
+nu-cmd-extra = "0.105.1"
+nu-utils = "0.105.1"
+nu-cli = "0.105.1"
+nu-path = "0.105.1"
 
 rand = {version = "0.9.1", optional = true }
 multipart-rs = { version = "0.2.1", optional = true }
 native-tls = { version = "0.2.14", optional = true }
-ureq = { version = "3.0.11", optional = true }
+ureq = { version = "3.0.12", optional = true }
 uuid = {version = "1.17.0", optional = true }
 
 [dev-dependencies]
