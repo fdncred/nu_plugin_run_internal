@@ -2,13 +2,13 @@ use nu_cli::gather_parent_env_vars;
 use nu_engine::{convert_env_values, eval_block};
 use nu_parser::parse;
 use nu_plugin::{
-    serve_plugin, EngineInterface, EvaluatedCall, MsgPackSerializer, Plugin, PluginCommand,
+    EngineInterface, EvaluatedCall, MsgPackSerializer, Plugin, PluginCommand, serve_plugin,
 };
 use nu_protocol::{
-    cli_error::report_compile_error, debugger::WithoutDebug, engine::EngineState, engine::Stack,
-    engine::StateWorkingSet, report_parse_error, report_parse_warning, report_shell_error,
     Category, Example, IntoValue, LabeledError, PipelineData, ShellError, Signature, Spanned,
-    SyntaxShape, Type, Value,
+    SyntaxShape, Type, Value, debugger::WithoutDebug, engine::EngineState, engine::Stack,
+    engine::StateWorkingSet, report_error::report_compile_error, report_parse_error,
+    report_parse_warning, report_shell_error,
 };
 use std::{path::PathBuf, sync::Arc};
 
