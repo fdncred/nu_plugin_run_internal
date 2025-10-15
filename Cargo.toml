@@ -22,16 +22,16 @@ license = "MIT"
 # nu-cli = { path = "../nushell/crates/nu-cli" }
 # nu-path = {  path = "../nushell/crates/nu-path" }
 
-nu-plugin = "0.107.0"
-nu-protocol = { version = "0.107.0", features = ["plugin"] }
-nu-engine = "0.107.0"
-nu-parser = "0.107.0"
-nu-command = "0.107.0"
-nu-cmd-lang = "0.107.0"
-nu-cmd-extra = "0.107.0"
-nu-utils = "0.107.0"
-nu-cli = "0.107.0"
-nu-path = "0.107.0"
+nu-plugin = "0.108.0"
+nu-protocol = { version = "0.108.0", features = ["plugin"] }
+nu-engine = "0.108.0"
+nu-parser = "0.108.0"
+nu-command = "0.108.0"
+nu-cmd-lang = "0.108.0"
+nu-cmd-extra = "0.108.0"
+nu-utils = "0.108.0"
+nu-cli = "0.108.0"
+nu-path = "0.108.0"
 
 rand = {version = "0.9.2", optional = true }
 multipart-rs = { version = "0.2.1", optional = true }
@@ -40,7 +40,7 @@ ureq = { version = "=3.0.12", optional = true }
 uuid = {version = "1.18.1", optional = true }
 
 [dev-dependencies]
-nu-plugin-test-support = "0.107.0"
+nu-plugin-test-support = "0.108.0"
 # nu-plugin-test-support = { version = "0.101.0" }
 
 [features]

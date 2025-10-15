@@ -49,7 +49,7 @@ impl PluginCommand for RunInternal {
         "Runs internal command."
     }
 
-    fn examples(&self) -> Vec<Example> {
+    fn examples(&self) -> Vec<Example<'_>> {
         vec![
             Example {
                 description: "Run an internal command",
@@ -222,8 +222,13 @@ pub fn evaluate_commands(
 
     // Run the block
     // let pipeline = eval_block::<WithoutDebug>(engine_state, stack, &block, input)?;
-    eval_block::<WithoutDebug>(engine_state, stack, &block, input).map_err(|e| e.into())
-
+    let pipeline = eval_block::<WithoutDebug>(engine_state, stack, &block, input)?;
+    let pipeline_data = pipeline.body;
+    if let PipelineData::Value(Value::Error { error, .. }, ..) = pipeline_data {
+        return Err((*error).into());
+    } else {
+        Ok(pipeline_data)
+    }
     // if let PipelineData::Value(Value::Error { error, .. }, ..) = pipeline {
     //     return Err(*error);
     // }
